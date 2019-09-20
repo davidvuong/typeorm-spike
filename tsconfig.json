@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./build",
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "lib": ["es2018"],
+    "target": "es2018"
+  },
+  "include": ["src", "__tests__"]
+}
