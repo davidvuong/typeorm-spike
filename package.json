@@ -4,7 +4,8 @@
   "description": "TypeORM Experiment",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",

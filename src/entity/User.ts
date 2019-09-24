@@ -1,9 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Opportunity } from './Opportunity';
 
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number | undefined;
+  id!: number;
 
   @Column()
   firstName!: string;
@@ -12,5 +13,8 @@ export class User {
   lastName!: string;
 
   @Column()
-  age: number;
+  age!: number;
+
+  @OneToMany((type) => Opportunity, (opportunity) => opportunity.user)
+  opportunities!: Opportunity[];
 }
